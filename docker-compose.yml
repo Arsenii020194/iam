@@ -3,20 +3,20 @@ volumes:
   kong-db:
     driver: local
 services:
-#  redis:
-#    image: redis
-#    networks:
-#      - spring-boot-postgresql-network
-#    volumes:
-#      - ./redis.conf:/usr/local/etc/redis/redis.conf
-#    ports:
-#      - "6379"
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+    volumes:
+      - ./redis:/data
 #  iam:
 #    build:
 #      context: ./
 #      dockerfile: Dockerfile
 #    ports:
-#      - "9000:9000"
+#      - "8080:8080"
 #    networks:
 #      - spring-boot-postgresql-network
 #    environment:

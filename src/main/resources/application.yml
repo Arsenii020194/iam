@@ -1,0 +1,5 @@
+spring:
+  redis:
+    password: eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+server:
+  port: 8080
