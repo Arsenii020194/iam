@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-002.yaml
+  - changeSet:
+      id: "insert_data"
+      author: arsenii_kuteynitsyn
+      changes:
+        - loadData:
+            columns:
+              - column:
+                  header: ID
+                  name: id
+                  type: varchar(100)
+              - column:
+                  header: CLIENT_ID
+                  name: client_id
+                  type: varchar(100)
+              - column:
+                  header: CLIENT_SECRET
+                  name: client_secret
+                  type: varchar(200)
+              - column:
+                  header: CLIENT_AUTHENTICATION_METHODS
+                  name: client_authentication_methods
+                  type: varchar(1000)
+              - column:
+                  header: AUTHORIZATION_GRANT_TYPES
+                  name: authorization_grant_types
+                  type: varchar(1000)
+              - column:
+                  header: REDIRECT_URIS
+                  name: redirect_uris
+                  type: varchar(1000)
+              - column:
+                  header: SCOPES
+                  name: scopes
+                  type: varchar(1000)
+              - column:
+                  header: CLIENT_NAME
+                  name: client_name
+                  type: varchar(200)
+              - column:
+                  header: CLIENT_SETTINGS
+                  name: client_settings
+                  type: varchar(2000)
+              - column:
+                  header: TOKEN_SETTINGS
+                  name: token_settings
+                  type: varchar(2000)
+            encoding: UTF-8
+            file: ./csv/clients-001.csv
+            relativeToChangelogFile: true
+            tableName: oauth2_registered_client
+            usePreparedStatements: true

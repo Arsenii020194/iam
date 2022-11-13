@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-master.yaml
+  - changeSet:
+      id: 1
+      author: your_liquibase_username
+      sql: create schema if not exists oauth2;
+  - includeAll:
+      path: classpath*:db/changelog/changelogs
+      errorIfMissingOrEmpty: false

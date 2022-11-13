@@ -1,0 +1,25 @@
+ID,CLIENT_ID,CLIENT_SECRET,CLIENT_AUTHENTICATION_METHODS,AUTHORIZATION_GRANT_TYPES,REDIRECT_URIS,SCOPES,CLIENT_NAME,CLIENT_SETTINGS,TOKEN_SETTINGS
+A06B957A-1AA3-494B-9C12-92959B1EA47A,messaging-client,$2a$12$Zp7zbX8zRAsquCvZtWmyW.z4So./BJ6UB/X6WlnOu/n1FwFHj0kt.,"client_secret_basic,client_secret_post",authorization_code,"http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc,http://127.0.0.1:8080/authorized","openid,message.read,message.write,clients.create,clients.read",messaging-client,"{
+        ""@class"": ""java.util.Collections$UnmodifiableMap"",
+        ""settings.client.require-proof-key"": false,
+        ""settings.client.require-authorization-consent"": false
+    }","{
+        ""@class"": ""java.util.Collections$UnmodifiableMap"",
+        ""settings.token.reuse-refresh-tokens"": true,
+        ""settings.token.id-token-signature-algorithm"": [
+            ""org.springframework.security.oauth2.jose.jws.SignatureAlgorithm"",
+            ""RS256""
+        ],
+        ""settings.token.access-token-time-to-live"": [
+            ""java.time.Duration"",
+            300.000000000
+        ],
+        ""settings.token.access-token-format"": {
+            ""@class"": ""org.springframework.security.oauth2.core.OAuth2TokenFormat"",
+            ""value"": ""self-contained""
+        },
+        ""settings.token.refresh-token-time-to-live"": [
+            ""java.time.Duration"",
+            3600.000000000
+        ]
+    }"
